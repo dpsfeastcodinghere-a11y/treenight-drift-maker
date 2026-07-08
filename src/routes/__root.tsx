@@ -77,7 +77,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Treenight is a premium Indian textile and fashion house — handwoven linens, considered silhouettes, made for generations.",
+          "Handwoven Indian linens and considered silhouettes. Made slowly, for generations.",
       },
       { name: "author", content: "Treenight" },
       { name: "theme-color", content: "#f4efe4" },
@@ -86,9 +86,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Treenight — Quiet Luxury. Honest Craft." },
       {
         property: "og:description",
-        content: "Handwoven Indian textiles and considered silhouettes.",
+        content: "Handwoven Indian linens and considered silhouettes. Made slowly, for generations.",
       },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Treenight — Quiet Luxury. Honest Craft." },
+      { name: "twitter:description", content: "Handwoven Indian linens and considered silhouettes. Made slowly, for generations." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2980c6cd-28ca-4429-ba9b-de705a902a87/id-preview-acba1037--8e9315f9-4ee3-410a-b942-c1d8d9d5a4df.lovable.app-1783522126192.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2980c6cd-28ca-4429-ba9b-de705a902a87/id-preview-acba1037--8e9315f9-4ee3-410a-b942-c1d8d9d5a4df.lovable.app-1783522126192.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

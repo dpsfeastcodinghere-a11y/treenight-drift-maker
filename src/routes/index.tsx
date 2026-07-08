@@ -26,7 +26,7 @@ export const Route = createFileRoute("/")({
           "Handwoven Indian linens and considered silhouettes. Made slowly, for generations.",
       },
       { property: "og:title", content: "Treenight — Quiet Luxury. Honest Craft." },
-      { property: "og:description", content: "Handwoven Indian linens and considered silhouettes." },
+      { property: "og:description", content: "Handwoven Indian linens and considered silhouettes. Made slowly, for generations." },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
