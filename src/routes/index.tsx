@@ -77,7 +77,7 @@ function Home() {
             className="tn-rise mt-8 max-w-lg text-base leading-relaxed text-ivory/85"
             style={{ animationDelay: "900ms" }}
           >
-            Quiet luxury from an old-world loom — considered silhouettes in pure linen, cotton and raw silk, made slowly by hand.
+            Linen shirts and softly tailored trousers — an everyday uniform, cut slowly by hand for a life well worn.
           </p>
           <div
             className="tn-rise mt-10 flex flex-wrap items-center gap-4"
