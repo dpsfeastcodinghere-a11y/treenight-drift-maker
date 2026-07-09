@@ -56,7 +56,7 @@ function Home() {
       <section ref={heroRef} className="relative h-[100svh] min-h-[640px] w-full overflow-hidden">
         <img
           src={heroImg}
-          alt="Woman in ivory linen against a forest green backdrop"
+          alt="Model in ivory linen shirt and beige wide-leg trousers against a forest green backdrop"
           width={1920}
           height={1280}
           fetchPriority="high"
@@ -71,7 +71,7 @@ function Home() {
             Est. 2024 · Handwoven in India
           </p>
           <h1 className="tn-headline-in mt-6 max-w-4xl font-display text-5xl font-light text-ivory md:text-8xl">
-            Woven for<br />generations.
+            Dressed in<br />quiet.
           </h1>
           <p
             className="tn-rise mt-8 max-w-lg text-base leading-relaxed text-ivory/85"
