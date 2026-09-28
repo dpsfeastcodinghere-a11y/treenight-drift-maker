@@ -10,8 +10,12 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WishlistRouteImport } from './routes/wishlist'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ShopRouteImport } from './routes/shop'
+import { Route as ShippingRouteImport } from './routes/shipping'
+import { Route as ReturnsRouteImport } from './routes/returns'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CollectionsRouteImport } from './routes/collections'
 import { Route as CartRouteImport } from './routes/cart'
@@ -23,6 +27,11 @@ const WishlistRoute = WishlistRouteImport.update({
   path: '/wishlist',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -31,6 +40,21 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const ShopRoute = ShopRouteImport.update({
   id: '/shop',
   path: '/shop',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShippingRoute = ShippingRouteImport.update({
+  id: '/shipping',
+  path: '/shipping',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReturnsRoute = ReturnsRouteImport.update({
+  id: '/returns',
+  path: '/returns',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -65,8 +89,12 @@ export interface FileRoutesByFullPath {
   '/cart': typeof CartRoute
   '/collections': typeof CollectionsRoute
   '/contact': typeof ContactRoute
+  '/privacy': typeof PrivacyRoute
+  '/returns': typeof ReturnsRoute
+  '/shipping': typeof ShippingRoute
   '/shop': typeof ShopRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
   '/wishlist': typeof WishlistRoute
 }
 export interface FileRoutesByTo {
@@ -75,8 +103,12 @@ export interface FileRoutesByTo {
   '/cart': typeof CartRoute
   '/collections': typeof CollectionsRoute
   '/contact': typeof ContactRoute
+  '/privacy': typeof PrivacyRoute
+  '/returns': typeof ReturnsRoute
+  '/shipping': typeof ShippingRoute
   '/shop': typeof ShopRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
   '/wishlist': typeof WishlistRoute
 }
 export interface FileRoutesById {
@@ -86,8 +118,12 @@ export interface FileRoutesById {
   '/cart': typeof CartRoute
   '/collections': typeof CollectionsRoute
   '/contact': typeof ContactRoute
+  '/privacy': typeof PrivacyRoute
+  '/returns': typeof ReturnsRoute
+  '/shipping': typeof ShippingRoute
   '/shop': typeof ShopRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
   '/wishlist': typeof WishlistRoute
 }
 export interface FileRouteTypes {
@@ -98,8 +134,12 @@ export interface FileRouteTypes {
     | '/cart'
     | '/collections'
     | '/contact'
+    | '/privacy'
+    | '/returns'
+    | '/shipping'
     | '/shop'
     | '/sitemap.xml'
+    | '/terms'
     | '/wishlist'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -108,8 +148,12 @@ export interface FileRouteTypes {
     | '/cart'
     | '/collections'
     | '/contact'
+    | '/privacy'
+    | '/returns'
+    | '/shipping'
     | '/shop'
     | '/sitemap.xml'
+    | '/terms'
     | '/wishlist'
   id:
     | '__root__'
@@ -118,8 +162,12 @@ export interface FileRouteTypes {
     | '/cart'
     | '/collections'
     | '/contact'
+    | '/privacy'
+    | '/returns'
+    | '/shipping'
     | '/shop'
     | '/sitemap.xml'
+    | '/terms'
     | '/wishlist'
   fileRoutesById: FileRoutesById
 }
@@ -129,8 +177,12 @@ export interface RootRouteChildren {
   CartRoute: typeof CartRoute
   CollectionsRoute: typeof CollectionsRoute
   ContactRoute: typeof ContactRoute
+  PrivacyRoute: typeof PrivacyRoute
+  ReturnsRoute: typeof ReturnsRoute
+  ShippingRoute: typeof ShippingRoute
   ShopRoute: typeof ShopRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  TermsRoute: typeof TermsRoute
   WishlistRoute: typeof WishlistRoute
 }
 
@@ -141,6 +193,13 @@ declare module '@tanstack/react-router' {
       path: '/wishlist'
       fullPath: '/wishlist'
       preLoaderRoute: typeof WishlistRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -155,6 +214,27 @@ declare module '@tanstack/react-router' {
       path: '/shop'
       fullPath: '/shop'
       preLoaderRoute: typeof ShopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shipping': {
+      id: '/shipping'
+      path: '/shipping'
+      fullPath: '/shipping'
+      preLoaderRoute: typeof ShippingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/returns': {
+      id: '/returns'
+      path: '/returns'
+      fullPath: '/returns'
+      preLoaderRoute: typeof ReturnsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -201,8 +281,12 @@ const rootRouteChildren: RootRouteChildren = {
   CartRoute: CartRoute,
   CollectionsRoute: CollectionsRoute,
   ContactRoute: ContactRoute,
+  PrivacyRoute: PrivacyRoute,
+  ReturnsRoute: ReturnsRoute,
+  ShippingRoute: ShippingRoute,
   ShopRoute: ShopRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  TermsRoute: TermsRoute,
   WishlistRoute: WishlistRoute,
 }
 export const routeTree = rootRouteImport
